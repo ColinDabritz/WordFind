@@ -20,9 +20,7 @@ G E Y Q K R C I G A M X J U X
 P R S T N C Y K H C O D E G N
 ```
 
-as a multidimensional array of strings
-
-and find all the words in a dictionary, such as:
+as am array of strings and find all the words in a dictionary, such as:
 
 ```
 BLOCK
@@ -48,23 +46,18 @@ VARIABLE
 
 that are in the puzzle.
 
-The function returns a list (which is printed out in the default example) where each match is printed in this format:
-* WORD(row,column,direction)
-    * e.g.: BLOCK(5,1,SW)
-
-word and directions are capitalized.
-
-Note that all eight directions are possible:
-* N
-* NE
-* E
-* SE
-* S
-* SW
-* W
-* NW
-
-Note that matching should be case insensitive
+* The function returns a list.
+* All eight directions are possible:
+	* N
+	* NE
+	* E
+	* SE
+	* S
+	* SW
+	* W
+	* NW
+* Matching should be case insensitive
+* letters may be shared between words
 
 The puzzle is an array of strings:
 
@@ -85,10 +78,10 @@ puzzle[2][1] = "m"
 ```
 
 results are an array of strings in the following format:
-WORD(row,column,direction)
-"XM(1,0,SW)"
-
+* WORD(row,column,direction)
+    * "XM(1,0,SW)"
+* Coordinates are for the first letter of the word, zero based
+* Direction is which way the letters procede from the first
+* word and directions are uppercase.
 * The results should be in sorted order
-* case must NOT matter
-* letters may be shared between words
 
