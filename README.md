@@ -85,3 +85,4 @@ results are an array of strings in the following format:
 * word and directions are uppercase.
 * The results should be in sorted order
 
+Puzzle generation courtesy: http://puzzlemaker.discoveryeducation.com/WordSearchSetupForm.asp
