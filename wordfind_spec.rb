@@ -94,7 +94,7 @@ describe "find_words()" do
     it "finds single letter matches" do
       puzzle = ["A"]
       words = ["A"]
-      find_words(puzzle,words)[0].should match("WORD")
+      find_words(puzzle,words)[0].should match("A")
     end
     it "finds single letter matches in the middle of other things" do
       puzzle = %w{
@@ -102,7 +102,7 @@ describe "find_words()" do
         -A-
         ---}
       words = ["A"]
-      find_words(puzzle,words)[0].should match("WORD")
+      find_words(puzzle,words)[0].should match("A")
     end
   end
 
@@ -116,7 +116,7 @@ describe "find_words()" do
     it "identifies first letter coordinates" do
       puzzle = ["---DROW---"]
       words = ["WORD"]
-      find_words(puzzle,words)[0].should eq("0,6")
+      find_words(puzzle,words)[0].should match("0,6")
     end
     it "identifies single letter coordinates"
     it "identifies reverse direction coordinates"
@@ -130,22 +130,22 @@ describe "find_words()" do
     it "identifies north matches" do
       puzzle = %w{- - - D R O W}
       words = ["WORD"]
-      find_words(puzzle,words)[0].should match(",N)")
+      find_words(puzzle,words)[0].should match(/,N\)/)
     end
     it "identifies south matches" do
       puzzle = %w{W O R D - - -}
       words = ["WORD"]
-      find_words(puzzle,words)[0].should match(",S)")
+      find_words(puzzle,words)[0].should match(/,S\)/)
     end
     it "identifies east matches" do
       puzzle = ["---WORD---"]
       words = ["WORD"]
-      find_words(puzzle,words)[0].should match(",E)")
+      find_words(puzzle,words)[0].should match(/,E\)/)
     end
     it "identifies west matches" do
       puzzle = ["---DROW---"]
       words = ["WORD"]
-      find_words(puzzle,words)[0].should match(",W)")
+      find_words(puzzle,words)[0].should match(/,W\)/)
     end
     # Stage 4
     it "identifies north-east matches"
