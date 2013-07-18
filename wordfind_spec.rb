@@ -147,13 +147,13 @@ describe "find_words()" do
       words = ["WORD"]
       find_words(puzzle,words)[0].should match(",W)")
     end
+    # Stage 4
     it "identifies north-east matches"
     it "identifies south-east matches"
     it "identifies south-west matches"
     it "identifies north-west matches"
   end
 
-  # Stage 4
   it "finds words diagonally"
   it "finds words diagonally backward"
 
@@ -195,7 +195,7 @@ describe "find_words()" do
   end
 
   describe "finds word format variations" do
-    # Stage 6
+    # Stage 5
     it "finds lowercase words in a capital puzzle"
     it "finds capital words in a lowercase puzzle"
     it "finds mixed capitalization"
