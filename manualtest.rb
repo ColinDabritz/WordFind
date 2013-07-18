@@ -38,3 +38,11 @@ words =
   "VARIABLE"]
 
 puts find_words(puzzle, words)
+
+# expect:
+
+# BLOCK(2,4,SW)
+# CLASS(1,14,S)
+# CODE(6,5,E)
+# DYNAMIC(6,9,NW)
+# etc...
