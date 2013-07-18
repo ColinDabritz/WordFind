@@ -193,17 +193,4 @@ describe "find_words()" do
     it "doesn't find longer words with portion in puzzle"
       # e.g. asdfjkl doesn't match puzzle line dfj"
   end
-
-  describe "finds word format variations" do
-    # Stage 5
-    it "finds lowercase words in a capital puzzle"
-    it "finds capital words in a lowercase puzzle"
-    it "finds mixed capitalization"
-    it "finds punctuated words"
-    it "matches words with overlapping letters"
-  end
-
-  describe "output formatting" do
-    it "is in sorted order"
-  end
 end
