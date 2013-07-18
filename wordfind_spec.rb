@@ -1,15 +1,15 @@
 require './wordfind.rb'
 
 describe "find_words()" do
-  describe "finds words" do
+  describe "find words" do
 
     # Stage 1
-  	it "finds simplest word" do
+    it "finds simplest word" do
       puzzle = ["WORD"]
       words = ["WORD"]
       find_words(puzzle,words)[0].should match("WORD")
     end
-    it "finds words in reverse direction" do
+    it "finds in reverse direction" do
       puzzle = ["DROW"]
       words = ["WORD"]
       find_words(puzzle,words)[0].should match("WORD")
@@ -19,12 +19,12 @@ describe "find_words()" do
       words = ["THINGONE", "THINGTWO"]
       find_words(puzzle,words).length.should eq(2)
     end
-    it "finds words forward" do
+    it "finds forward" do
       puzzle = ["---WORD---"]
       words = ["WORD"]
       find_words(puzzle,words)[0].should match("WORD")
     end
-    it "finds words backward" do
+    it "finds backward" do
       puzzle = ["---DROW---"]
       words = ["WORD"]
       find_words(puzzle,words)[0].should match("WORD")
@@ -34,8 +34,14 @@ describe "find_words()" do
       words = ["WORD"]
       find_words(puzzle,words)[0].should match("WORD")
     end
-    it "finds edge matches" do
+    it "finds reversed edge matches" do
       puzzle = ["---DROW"]
+      words = ["WORD"]
+      find_words(puzzle,words)[0].should match("WORD")
+    end
+    it "find words on second line" do
+      puzzle = ["----",
+                "WORD"]
       words = ["WORD"]
       find_words(puzzle,words)[0].should match("WORD")
     end
