@@ -195,7 +195,7 @@ describe "find_words()" do
   end
 
   describe "finds word format variations" do
-    # Stage 5
+    # Stage 6
     it "finds lowercase words in a capital puzzle"
     it "finds capital words in a lowercase puzzle"
     it "finds mixed capitalization"
