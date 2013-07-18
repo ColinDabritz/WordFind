@@ -94,7 +94,7 @@ describe "find_words()" do
     it "finds single letter matches" do
       puzzle = ["A"]
       words = ["A"]
-      find_words(puzzle,words)[0].should match("WORD")
+      find_words(puzzle,words)[0].should match("A")
     end
     it "finds single letter matches in the middle of other things" do
       puzzle = %w{
@@ -102,7 +102,8 @@ describe "find_words()" do
         -A-
         ---}
       words = ["A"]
-      find_words(puzzle,words)[0].should match("WORD")
+      find_words(puzzle,words)[0].should match("A")
     end
+  end
   end
 end
