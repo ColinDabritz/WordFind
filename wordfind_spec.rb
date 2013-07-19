@@ -105,5 +105,4 @@ describe "find_words()" do
       find_words(puzzle,words)[0].should match("A")
     end
   end
-  end
 end
